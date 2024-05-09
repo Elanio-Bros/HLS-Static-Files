@@ -6,7 +6,7 @@ import m3u8
 from m3u8 import Segment
 
 
-class Load_Videos(Thread):
+class Load_Files(Thread):
     def __init__(self, resolution, default_path, dir, uri, path):
         Thread.__init__(self)
         self.resolution = resolution

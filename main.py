@@ -1,6 +1,6 @@
 import os
 import shutil
-from load_videos import Load_Videos
+from load_files import Load_Files
 
 # Live Stream
 DEFAULT_PATH = './file'
@@ -28,8 +28,8 @@ while True:
         if os.path.isdir(dir) and os.path.exists(dir):
             loads = []
             for resolution in ['480p', '720p', '1080p']:
-                load_videos = Load_Videos(resolution, DEFAULT_PATH, dir, uri, path)
-                loads.append(load_videos)
+                file = Load_Files(resolution, DEFAULT_PATH, dir, uri, path)
+                loads.append(file)
             for load in loads:
                 load.start()
             for load in loads:
